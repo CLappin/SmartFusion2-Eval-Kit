@@ -26,109 +26,48 @@
 # 
 
 
-set_io {GPIO_IN[0]}   \
+# -- User PushButtons I/O -- #
+
+set_io {PUSH_BTN_1}   \
     -pinname L20      \
     -fixed yes        \
     -DIRECTION INPUT
 
-
-set_io {GPIO_IN[1]}   \
+set_io {PUSH_BTN_2}   \
     -pinname K16      \
     -fixed yes        \
     -DIRECTION INPUT
 
 
-# Additional GPIOs
-# set_io {GPIO_IN[2]}   \
-    # -pinname K18      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
+# -- LEDs I/O --#
 
-
-# set_io {GPIO_IN[3]}   \
-    # -pinname J18      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[4]}   \
-    # -pinname L19      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[5]}   \
-    # -pinname L18      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[6]}   \
-    # -pinname K21      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io {GPIO_IN[7]}   \
-    # -pinname K20      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-set_io {GPIO_OUT[0]}   \
-    -pinname E1        \
-    -fixed yes         \
-    -DIRECTION OUTPUT
-
-
-set_io {GPIO_OUT[1]}   \
+set_io {LED_1}   \
     -pinname F4        \
     -fixed yes         \
     -DIRECTION OUTPUT
 
-
-set_io {GPIO_OUT[2]}   \
+set_io {LED_2}   \
     -pinname F3        \
     -fixed yes         \
     -DIRECTION OUTPUT
 
-
-set_io {GPIO_OUT[3]}   \
+set_io {LED_3}   \
     -pinname G7        \
+    -fixed yes         \
+    -DIRECTION OUTPUT
+	
+set_io {LED_4}   \
+    -pinname H7        \
     -fixed yes         \
     -DIRECTION OUTPUT
 
 
-# Additional GPIOs
-# set_io {GPIO_OUT[4]}   \
-    # -pinname H7        \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io {GPIO_OUT[5]}   \
-    # -pinname J6        \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io {GPIO_OUT[6]}   \
-    # -pinname H6        \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io {GPIO_OUT[7]}   \
-    # -pinname H5        \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
+# -- UART RX/TX -- #
 
 set_io RX             \
     -pinname G18      \
     -fixed yes        \
     -DIRECTION INPUT
-
 
 set_io TX              \
     -pinname H19       \
@@ -136,39 +75,6 @@ set_io TX              \
     -DIRECTION OUTPUT
 	
 	
-# Additional Constraints
-# set_io CLK0_PAD       \
-    # -pinname K1       \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io SPISCLKO        \
-    # -pinname N19       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io SPISDI         \
-    # -pinname N20      \
-    # -fixed yes        \
-    # -DIRECTION INPUT
-
-
-# set_io SPISDO          \
-    # -pinname N21       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-# set_io SPISS           \
-    # -pinname N22       \
-    # -fixed yes         \
-    # -DIRECTION OUTPUT
-
-
-
-
 # 
 # Dedicated Peripheral I/O Settings
 # 
@@ -180,3 +86,86 @@ set_io TX              \
 # the other listed attributes have been applied
 # 
 
+
+# Additional GPIOs IN
+
+# set_io {GPIO_IN[2]}   \
+    # -pinname K18      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[3]}   \
+    # -pinname J18      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[4]}   \
+    # -pinname L19      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[5]}   \
+    # -pinname L18      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[6]}   \
+    # -pinname K21      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io {GPIO_IN[7]}   \
+    # -pinname K20      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+	
+	
+# Additional GPIOs OUT
+
+# SET_IO {GPIO_OUT[0]}   \
+    # -PINNAME E1        \
+    # -FIXED YES         \
+    # -DIRECTION OUTPUT
+
+# set_io {GPIO_OUT[5]}   \
+    # -pinname J6        \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io {GPIO_OUT[6]}   \
+    # -pinname H6        \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io {GPIO_OUT[7]}   \
+    # -pinname H5        \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT	
+	
+
+# Additional Constraints
+
+# set_io CLK0_PAD       \
+    # -pinname K1       \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io SPISCLKO        \
+    # -pinname N19       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io SPISDI         \
+    # -pinname N20      \
+    # -fixed yes        \
+    # -DIRECTION INPUT
+
+# set_io SPISDO          \
+    # -pinname N21       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
+
+# set_io SPISS           \
+    # -pinname N22       \
+    # -fixed yes         \
+    # -DIRECTION OUTPUT
